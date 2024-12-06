@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main_test.HelloController">
+    <children>
+        <Label layoutX="290.0" layoutY="14.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="44.0" prefWidth="128.0" text="Word Statistics" textAlignment="CENTER" textFill="#426342">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="directoryPath" layoutX="54.0" layoutY="72.0" prefHeight="28.0" prefWidth="242.0" />
+        <Button fx:id="browseButton" layoutX="309.0" layoutY="73.0" mnemonicParsing="false" onAction="#handleBrowse" text="Browse" />
+        <CheckBox fx:id="includeSubdirectoriesCheckbox" layoutX="14.0" layoutY="107.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="189.0" text="Include Subdirectories" />
+        <TableView fx:id="statisticsTable" layoutY="192.0" prefHeight="242.0" prefWidth="694.0">
+            <columns>
+                <TableColumn fx:id="fileName_Text" prefWidth="118.39996337890625" text="File/Directory Name" />
+                <TableColumn fx:id="NWords" prefWidth="129.60004425048828" text="Number of Words" />
+                <TableColumn fx:id="ISN" minWidth="7.199951171875" prefWidth="66.4000244140625" text="#is" />
+                <TableColumn fx:id="AREN" prefWidth="65.5999755859375" text="#are" />
+                <TableColumn fx:id="YOUN" prefWidth="68.79998779296875" text="#you" />
+                <TableColumn fx:id="LONG" prefWidth="119.99996948242188" text="Longest " />
+                <TableColumn fx:id="SHORT" prefWidth="123.99996948242188" text="Shortest " />
+            </columns>
+        </TableView>
+        <Label layoutX="14.0" layoutY="72.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="28.0" prefWidth="54.0" text="Path" textAlignment="CENTER" textFill="#426342">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label fx:id="progressArea1" layoutX="132.0" layoutY="445.0" prefHeight="28.0" prefWidth="242.0" />
+
+        <Label layoutX="17.0" layoutY="445.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="28.0" prefWidth="102.0" text="Longest " textAlignment="CENTER" textFill="#426342">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="17.0" layoutY="498.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="28.0" prefWidth="102.0" text="Shortest " textAlignment="CENTER" textFill="#426342">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label fx:id="progressArea2" layoutX="132.0" layoutY="498.0" prefHeight="28.0" prefWidth="242.0" />
+
+        <Button fx:id="Start1" layoutX="285.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleStart" prefHeight="26.0" prefWidth="102.0" text="Start" />
+
+        <!-- Add TextArea to Display Process Logs -->
+        <TextArea fx:id="logArea" editable="false" layoutX="23.0" layoutY="533.0" prefHeight="154.0" prefWidth="680.0" wrapText="true" />
+    </children>
+</AnchorPane>
